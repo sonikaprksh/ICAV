@@ -1,0 +1,67 @@
+1. What is "N + 1" problem in REST APIs and how would you solve it?
+
+the N+1 problem is a situation where client applications are required to call the server N+1 times to fetch one collection 
+resource + N client resources, mostly because of collection resources not had enough information about child resources to build 
+its user interface altogether.
+The n+1 problem means that the server executes multiple unnecessary round trips to datastores for nested data.
+
+
+
+
+2. When do you stop writing unit tests?
+
+If you are using TDD, then you stop unit testing when all the tests in the test list have succeeded. Otherwise, you stop unit testing when the cost of finding more bugs through unit testing exceeds the cost of finding them through your QA process.
+
+3. Why would one use monorepos?
+
+The monorepo changes the way you interact with other teams such that everything is always integrated. ... When we make any change to Angular,
+ we need to sync this into Google's monorepo. Doing so means that every Angular user immediately gets the change. Every commit is a release!
+ 
+ 
+ 4. What is Liskov substitution principle?
+
+ 
+ The principle defines that objects of a superclass shall be replaceable with objects of its subclasses without breaking the application. That requires the objects of your subclasses to behave in the same way as the objects of your superclass. You can achieve that by following a few rules, which are pretty similar to the design by contract concept defined by Bertrand Meyer.
+
+An overridden method of a subclass needs to accept the same input parameter values as the method of the superclass. That means you can implement less restrictive validation rules, but you are not allowed to enforce stricter ones in your subclass. Otherwise, any code that calls this method on an object of the superclass might cause an exception, if it gets called with an object of the subclass.
+
+Similar rules apply to the return value of the method. The return value of a method of the subclass needs to comply with the same rules as the return value of the method of the superclass. You can only decide to apply even stricter rules by returning a specific subclass of the defined return value, or by returning a subset of the valid return values of the superclass.
+
+5. How do you avoid race conditions?
+
+
+Race conditions can be avoided by proper thread synchronization in critical sections. Thread synchronization can be achieved using a 
+synchronized block of Java code. Thread synchronization can also be achieved using other synchronization constructs like locks or atomic 
+variables like java.util.concurrent.atomic.AtomicInteger.
+
+6. What is the first thing you do when you encounter a bug?
+
+
+
+
+While testing if you observed any bug, add this bug to the bug defect tracking tool immediately, don’t wait to write bug in details afterward. If you thinking of reporting bug later then it might be possible that miss few important reproduce steps. Reporting bug immediately will help to write a good bug report, which help developer to get an exact idea of the problem faced by the user.
+
+
+
+1. What other features would you like to add?
+
+Mowing machine will be provided from our end.
+
+2. How would you handle user authentication?
+
+Supports SSO, MFA, forced password change & Offline Refresh Tokens out of the box
+
+3. How would you deploy the solution in an enterprise environment?
+
+While installation of a small demonstration environment can be completed within an hour, enterprise deployments require careful planning. You first need to gain a deeper understanding of the product and how it best integrates with your organization's overall security and compliance strategy.
+
+Most development or test environments deploy at least a two-node management environment setup. One node hosts the Data Center Security: Server Advanced management server. The other node hosts the MS SQL Server instance that is needed for the Data Center Security: Server Advanced database.
+
+With appropriate hardware and configuration settings, this scenario can support 10,000 deployed agents. The Data Center Security: Server Advanced Management Server node, which is itself stateless, does not require excessive system resources and uses little disk I/O. It can also operate efficiently as a Guest Virtual Machine (GVM). Thus, configuring multiple Management Server systems on virtual machines provides for simple failover and easy setup.
+
+As a best practice, install a Data Center Security: Server Advanced agent on each computer that hosts a management component. This setup lets you monitor and secure the systems from tampering.
+
+In a two-node scenario, you should deploy a Data Center Security: Server Advanced Windows agent to protect the Management Server. You should deploy a second agent on the computer where the Data Center Security: Server Advanced SQL Server database resides. You should deploy appropriate protection and detection policies to these agents to activate enforcement.
+
+Data Center Security: Server Advanced's J2EE application server and Microsoft SQL Server management components support high availability scenarios using common enterprise techniques. Many users add an additional Data Center Security: Server Advanced Management Server node to provide high availability. With the proper configuration, when one Data Center Security: Server Advanced Management Server fails, the remaining node can still service agent communications and console activities. 
+
